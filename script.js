@@ -26,12 +26,12 @@ function moveEverything() {
 
 function drawEverything() {
 
-    canvasContext.fillStyle = 'black';
-    canvasContext.fillRect(0, 0, canvas.width, canvas.height);
-
-    canvasContext.fillStyle = 'white';
-    canvasContext.fillRect(0, 210, 10, 100);
-
-    canvasContext.fillStyle = 'red';
-    canvasContext.fillRect(ballx, 100, 10, 10);
+    colorRect(0, 0, canvas.width, canvas.height, 'black');
+    colorRect(20, 200, 10, 100, 'white');
+    colorRect(ballx, 100, 10, 10, 'red');
 };
+
+function colorRect(leftx, topy, width, height, drawColor) {
+    canvasContext.fillStyle = drawColor;
+    canvasContext.fillRect(leftx, topy, width, height);
+}
